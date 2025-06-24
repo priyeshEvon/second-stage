@@ -8,9 +8,9 @@ export default class Animations{
     }
     create(){
         this.add.image(210,200,'bg').setOrigin(0.5).setScale(1);
-        this.player = this.physics.add.sprite(100, 100, 'move',36).setCollideWorldBounds(true).setScale(3.5);
+        this.player = this.physics.add.sprite(100, 100, 'move',36).setCollideWorldBounds(true).setDisplaySize(42,42);
         this.cursors=this.input.keyboard.createCursorKeys();
-
+        
         this.anims.create({
             key:'walkleft',
             frames:this.anims.generateFrameNumbers('move',{ frames: [37, 45, 53]}),
